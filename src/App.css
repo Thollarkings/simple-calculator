@@ -8,25 +8,24 @@ body {
   padding: 0; /* Remove default body padding */
   background: linear-gradient(135deg, #f0f8ff, #8f8fb9); /* Gradient background */
   height: 100vh; /* Full viewport height */
-  display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center;
-  align-items: center; /* Center vertically */
 }
 
 .App {
   background: linear-gradient(135deg, #f3e6f6, #beacb9, #f3e6f6);
-  border-radius: 15px; 
+  border-radius: 15px;
   box-shadow: 0px 40px 25px rgba(0, 0, 0, 0.39);
-  padding: 4%; 
-  width: 70%; 
-  border: 2px solid rgb(90, 3, 74);
+  padding: 3%; /* Use percentage for padding */
+  padding-top: 2%;
+  width: 80%; /* Use percentage for width */
+  max-width: 600px; /* Limit max width for larger screens */
   justify-self: center;
+  
+  margin-top: 40px;
 }
 
 .Title {
   margin-bottom: 20px; /* Space below title */
-  font-size: 36px; /* Adjust title size as needed */
+  font-size: 2rem; /* Use rem for responsive font size */
   text-align: center; /* Center title text */
   color: rgb(60, 2, 62);
 }
@@ -34,82 +33,147 @@ body {
 .Display {
   width: 100%; /* Full width of the container */
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 10px;
   border: 10px groove rgb(233, 195, 226);
   text-align: center;
-  font-size: 24px;
-}
-
-.Calculator {
-  display: flex;
-  flex-direction: column; /* Stack children in a column */
-  align-items: center; /* Center horizontally */
+  font-size: 1.5rem; /* Use rem for responsive font size */
+  margin-bottom: 20px;
 }
 
 .InputField {
   background-color: whitesmoke;
+  width: 100%;
   padding: 10px;
-  border-radius: 5px;
-  border: 10px groove rgb(233, 195, 226); /* Subtle border */
+  border-radius: 10px;
+  border: 10px groove rgb(233, 195, 226);
   margin-bottom: 20px;
-  text-align: center;
-  font-size: 24px;
-  width: 100%; /* Ensure it fits within its container */
-}
-
-.ButtonContainer {
-  display: flex; /* Align buttons horizontally */
-  justify-content: center; /* Center buttons horizontally */
-  gap: 10px; /* Space between buttons */
-  flex-wrap: wrap; /* Allow buttons to wrap to the next line if needed */
-}
-
-button {
-  font-size: 25px; /* Smaller font size */
-  padding: 8px 16px; /* Reduced padding */
-  height: auto; /* Let the height adjust based on padding and font size */
-  border-radius: 5px; /* Keep rounded corners */
-  border: 5px outset rgb(152, 88, 88); /* Border color */
-  background:linear-gradient(135deg, #a0a0a0, #ffffff, #a0a0a0); /* Background color */
-  margin-right: 5px; /* Space between buttons */
-  
-}
-
-button:nth-last-child(2),
-button:nth-last-child(1) {
-  background: linear-gradient(135deg, #4d0340, #ad7878, #3f0334); /* Highlight color for last two buttons */
-  color: white; /* Text color for highlighted buttons */
+  justify-self: center;
+  font-size: 1.5rem; /* Use rem for responsive font size */
 }
 
 .NumberContainer {
-  display: flex;                /* Use flexbox for layout */
-  flex-wrap: wrap;             /* Allow buttons to wrap if needed */
-  justify-content: center;      /* Center the buttons horizontally */
-  gap: 10px;                   /* Space between buttons */
-  padding: 40px;               /* Optional padding around the container */
-  width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(60px, auto)); /* Responsive columns */
+    grid-gap: .5rem; /* Use rem for spacing */
+    margin-top: .5rem; /* Use rem for spacing */
+    width: 100%; /* Allow it to adjust based on content */
+    height: auto;
+    padding: 0 3rem 0 4rem;
 }
 
-.numberpad {
-  width: 50px;                /* Set a fixed width for buttons */
-  height: 50px;               /* Set a fixed height for buttons */
-  font-size: 18px;            /* Font size for button text */
-  display: flex;              /* Center text within button */
-  align-items: center;        /* Center vertically */
-  justify-content: center;    /* Center horizontally */
-  border: 1px solid #ccc;     /* Optional border */
-  border-radius: 5px;         /* Optional rounded corners */
-  background-color: #f0f0f0;  /* Optional background color */
-  cursor: pointer;             /* Change cursor on hover */
-  transition: background-color 0.3s; /* Smooth transition for hover effect */
+.NumberPad {
+    font-size: 1rem; /* Responsive font size based on viewport width */
+    border-radius: .5rem;
+    width: 80%;
+    border: .25rem outset rgb(233,195,226);
+    background: linear-gradient(135deg, rgb(146,112,139), #e8dfeb, rgb(102,85,99));
+    margin-top:.25rem; 
+    cursor:pointer;
+    transition:.3s background-color;
+    height: 3rem;
 }
 
-.numberpad:hover {
-  background-color: #e0e0e0;  /* Change background color on hover */
+.NumberPad:hover {
+    background-color:#e0e0e0;
 }
 
-#footer {
-  text-align: center;
-  margin: 9%;
-  font-size: 1.2rem;
+.ButtonContainer {
+    display: flex;
+    margin-top:.5rem; 
+    width:auto; 
+    margin-top: 20px;
+}
+
+.operation-buttons {
+    background: linear-gradient(135deg,#4d0340,#ad7878,#3f0334);
+    color:white;
+    font-size:2rem; 
+    padding:.1rem .1rem; 
+    width:10rem; 
+    height:auto; 
+    border:.25rem outset rgb(152,88,88);
+    border-radius: .3rem; 
+    margin:.5rem ;
+    cursor:pointer;
+}
+
+.operation-buttons:hover {
+    background-color:#7c0562;
+}
+
+.eql {
+  display: flex;
+  justify-content: center;
+}
+.equal-button {
+    width:100%; 
+    font-size:1.5rem; 
+    padding:.1rem .1rem; 
+    height:auto; 
+    border-radius:.5rem ;
+    border:.25rem outset rgb(152,88,88); 
+    cursor:pointer;
+    transition:.3s background-color ;
+    margin-top:.75rem ;
+    background:#00350c ;
+    color:white ;
+}
+
+.resets {
+   display:flex ;
+   gap:.5rem ; 
+   justify-self:center ;
+}
+
+.reset-buttons {
+   font-size:1rem ; 
+   padding:.5rem .75rem ; 
+   height:auto ; 
+   border-radius:.5rem ; 
+   border:.25rem outset rgba(255, 255, 255, 0.432); 
+   cursor:pointer ; 
+   transition:.3s background-color ;
+   margin-top:2rem ; 
+   background-color:#000000 ;
+   color: #e8dfeb;
+}
+
+.equal-button:hover {
+   background:#357a38 ;
+}
+
+
+.reset-buttons:hover {
+   background-color:#e0e0e0 ;
+}
+
+/* Footer Styles (if applicable) */
+footer {
+   text-align:center ;
+   margin:4rem 0 -3rem 0 ;
+   font-size:1rem ; 
+}
+
+/* Media Queries for Responsiveness */
+
+@media (max-width:768px) {  
+  .App {
+      padding:10%; /* Increase padding on smaller screens for better spacing */
+  }
+
+  .Title {
+      font-size:2.5rem; /* Adjust title size for smaller screens */
+  }
+
+  .Display,
+  .InputField,
+  .NumberPad,
+  .operation-buttons,
+  .equal-button,
+  .reset-buttons {
+      font-size:.9rem; /* Smaller buttons and inputs on mobile devices */
+      padding:.4rem; /* Corrected padding */
+      height:auto;
+      margin-bottom:.5rem; /* Add spacing between buttons on mobile */
+  }
 }
