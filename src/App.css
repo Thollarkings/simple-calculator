@@ -135,7 +135,7 @@ body {
    transition:.3s background-color ;
    margin-top:2rem ; 
    background-color:#000000 ;
-   color: #e8dfeb;
+   color: #ffffff;
 }
 
 .equal-button:hover {
@@ -158,22 +158,46 @@ footer {
 
 @media (max-width:768px) {  
   .App {
-      padding:10%; /* Increase padding on smaller screens for better spacing */
+      padding:5%; /* Increase padding on smaller screens for better spacing */
   }
 
   .Title {
-      font-size:2.5rem; /* Adjust title size for smaller screens */
+      font-size:2rem; /* Adjust title size for smaller screens */
   }
 
-  .Display,
-  .InputField,
-  .NumberPad,
-  .operation-buttons,
-  .equal-button,
+  .NumberContainer {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(60px, auto)); /* Responsive columns */
+    grid-gap: .5rem; /* Use rem for spacing */
+    margin-top: .5rem; /* Use rem for spacing */
+    width: 100%; /* Allow it to adjust based on content */
+    height: auto;
+    padding: 0 0.5rem 0 0.7rem;
+  
+}
+
+.NumberPad {
+  font-size: 1.5rem;
+}
+  
+footer {
+  text-align:center ;
+  margin:1rem 0 -2rem 0 ;
+  font-size:1rem ; 
+}
+  
+  
   .reset-buttons {
       font-size:.9rem; /* Smaller buttons and inputs on mobile devices */
       padding:.4rem; /* Corrected padding */
       height:auto;
-      margin-bottom:.5rem; /* Add spacing between buttons on mobile */
+      margin-bottom: 0 ; /* Add spacing between buttons on mobile */
+  }
+  
+  .Display,
+  .equal-button,
+  .operation-buttons,
+  .InputField {
+    font-size: 1.5rem;
   }
 }
