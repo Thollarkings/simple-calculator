@@ -5,7 +5,7 @@
 
 body {
   margin: 0; /* Remove default body margin */
-  padding: 0; /* Remove default body padding */
+  padding: 1rem; /* Remove default body padding */
   background: linear-gradient(135deg, #f0f8ff, #8f8fb9); /* Gradient background */
   height: 100vh; /* Full viewport height */
 }
@@ -14,12 +14,10 @@ body {
   background: linear-gradient(135deg, #f3e6f6, #beacb9, #f3e6f6);
   border-radius: 15px;
   box-shadow: 0px 40px 25px rgba(0, 0, 0, 0.39);
-  padding: 3%; /* Use percentage for padding */
-  padding-top: 2%;
+  padding: 2%; /* Use percentage for padding */
   width: 80%; /* Use percentage for width */
   max-width: 600px; /* Limit max width for larger screens */
   justify-self: center;
-  
   margin-top: 40px;
 }
 
@@ -32,23 +30,25 @@ body {
 
 .Display {
   width: 100%; /* Full width of the container */
-  padding: 10px;
+  padding: 5px;
   border-radius: 10px;
   border: 10px groove rgb(233, 195, 226);
   text-align: center;
-  font-size: 1.5rem; /* Use rem for responsive font size */
-  margin-bottom: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .InputField {
   background-color: whitesmoke;
   width: 100%;
-  padding: 10px;
+  padding: 5px;
   border-radius: 10px;
   border: 10px groove rgb(233, 195, 226);
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   justify-self: center;
-  font-size: 1.5rem; /* Use rem for responsive font size */
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .NumberContainer {
@@ -62,7 +62,7 @@ body {
 }
 
 .NumberPad {
-    font-size: 1rem; /* Responsive font size based on viewport width */
+    font-size: 1.5rem; /* Responsive font size based on viewport width */
     border-radius: .5rem;
     width: 80%;
     border: .25rem outset rgb(233,195,226);
@@ -70,7 +70,7 @@ body {
     margin-top:.25rem; 
     cursor:pointer;
     transition:.3s background-color;
-    height: 3rem;
+    height: 2rem;
 }
 
 .NumberPad:hover {
@@ -90,7 +90,7 @@ body {
     font-size:2rem; 
     padding:.1rem .1rem; 
     width:10rem; 
-    height:auto; 
+    height:3rem; 
     border:.25rem outset rgb(152,88,88);
     border-radius: .3rem; 
     margin:.5rem ;
@@ -150,7 +150,7 @@ body {
 /* Footer Styles (if applicable) */
 footer {
    text-align:center ;
-   margin:4rem 0 -3rem 0 ;
+   margin:2rem 0 -2rem 0 ;
    font-size:1rem ; 
 }
 
